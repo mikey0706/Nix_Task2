@@ -16,7 +16,6 @@ namespace Nix_Task2
         private static VisitorController visitor;
         private static RoomController room;
 
-        private static IMapper mapper = new Mapper(AutomapperConfig.Config);
         
         static void Main(string[] args)
         {
