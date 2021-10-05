@@ -50,6 +50,9 @@ namespace Nix_Task2.Controllers
 
         public string DeleteVisitor(int id) 
         {
+            var ro = _unit.RoomsData().AllRooms().FirstOrDefault(r=>r.VisitorId==id);
+            ro.VisitorId = 0;
+            _unit.RoomsData().EditRoom(ro);
             return _unit.VisitorData().DeleteUser(id);
         }
     }
